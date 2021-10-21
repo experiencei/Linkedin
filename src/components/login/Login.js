@@ -1,13 +1,14 @@
-import React , {useState} from 'react'
+import React , {useState , useDispatch} from 'react'
 import "./Login.css";
 import { auth } from '../firebase/firebase';
+import { login } from '../../features/userSlice';
 
 function Login() {
     const [ email , setEmail] = useState('')
     const [ name , setName] = useState('')
     const [ password , setPassword] = useState('');
     const [ profilePic , setprofilePic] = useState('');
-
+    const dispatch = useDispatch();
     const register = () => {
         if (!name) {
             return alert('Please enter a full name')
@@ -16,6 +17,13 @@ function Login() {
            userAuth.user.updateProfile({
                  displayName: name,
                  photoUrl: profilePic,
+           }).then(() =>{
+                dispatch(login({
+                   email : userAuth.user.email,
+                   uid : userAuth.user.uid,
+                   displayName : name,
+                   photoUrl : profilePic,
+                }))
            })
        })
     };

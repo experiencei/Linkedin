@@ -6,8 +6,19 @@ function Login() {
     const [ email , setEmail] = useState('')
     const [ name , setName] = useState('')
     const [ password , setPassword] = useState('');
+    const [ profilePic , setprofilePic] = useState('');
 
-    const register = () => {};
+    const register = () => {
+        if (!name) {
+            return alert('Please enter a full name')
+        }
+       auth.createUserWithEmailAndPassword(email , password).then((userAuth) => {
+           userAuth.user.updateProfile({
+                 displayName: name,
+                 photoUrl: profilePic,
+           })
+       })
+    };
 
     const loginToApp = (e) => {
         e.preventDefault();
@@ -30,6 +41,8 @@ function Login() {
                 <input
                     placeholder="Profile pic URL (optional)"
                     type="text"
+                    value={profilePic}
+                    onChange={ e => setprofilePic(e.target.value)}
                 />
                 <input
                     placeholder="Email"

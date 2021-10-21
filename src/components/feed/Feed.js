@@ -1,4 +1,4 @@
-import { CalendarViewDay, Create, EventNote, Flip, Image, Subscriptions } from '@material-ui/icons';
+import { CalendarViewDay, Create, EventNote, Image, Subscriptions } from '@material-ui/icons';
 import React, { useState , useEffect} from 'react'
 import { db } from '../firebase/firebase';
 import InputOption from '../inputoption/InputOption';

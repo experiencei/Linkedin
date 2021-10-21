@@ -3,7 +3,7 @@ import React from 'react';
 import "./Widgets.css"
 
 function Widgets() {
-   const newsArticle = ( heading , subtitle) => {
+   const newsArticle = (heading , subtitle) => {
        <div className="widgets__article">
            <div className="widgets__articleLeft">
                <FiberManualRecord/>

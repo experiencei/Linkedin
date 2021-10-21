@@ -1,6 +1,6 @@
 import { Avatar } from '@material-ui/core';
 import React from 'react';
-import { useDispatch , useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { selectUser } from '../../features/userSlice';
 import "./HeaderOption.css";
 

@@ -64,8 +64,6 @@ function Feed() {
              />
             )
          }
-            <Post name="experience" description="heelok"
-            message="wow it works" />
         </div>
     )
 }

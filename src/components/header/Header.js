@@ -4,11 +4,13 @@ import HeaderOption from '../headerOption/HeaderOption';
 import { BusinessCenter, Chat, Notifications, Search } from '@material-ui/icons'
 import { Home } from '@material-ui/icons';
 import { SupervisorAccount } from '@material-ui/icons';
-import { useDispatch } from 'react-redux';
+import { useDispatch , useSelector } from 'react-redux';
 import { auth } from '../firebase/firebase';
 import{ logout }from "../../features/userSlice";
+import { selectUser } from '../../features/userSlice';
 
 function Header() {
+    const user = useSelector(selectUser)
     const dispatch = useDispatch();
       
     const logoutOfApp = () => {

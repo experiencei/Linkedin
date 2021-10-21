@@ -1,6 +1,7 @@
 import { CalendarViewDay, Create, EventNote, Image, Subscriptions } from '@material-ui/icons';
 import React from 'react'
 import InputOption from '../inputoption/InputOption';
+import Post from '../post/Post';
 import "./Feed.css";
 
 
@@ -23,7 +24,8 @@ function Feed() {
                 </div>
             </div>
 
-            
+            <Post name="experience" description="heelok"
+            message="wow it works" />
         </div>
     )
 }

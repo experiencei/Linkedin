@@ -9,6 +9,8 @@
 .header__left > img{
     object-fit: contain;
     height:40PX;
+    margin-right: 10px;
+
 }
 .header__search{
     padding: 10px;
@@ -16,9 +18,13 @@
     align-items: center;
     border-radius:22px;
     color:gray;
+    background-color: #eef3f8;
 }
 .header__search > input{
     outline: none;
     background: none;
-    border: none
+    border: none;
+}
+.header__left{
+    
 }

@@ -4,6 +4,7 @@ import { db } from '../firebase/firebase';
 import InputOption from '../inputoption/InputOption';
 import Post from '../post/Post';
 import "./Feed.css";
+import firebase from '@firebase/app-compat';
 
 
 function Feed() {
@@ -29,7 +30,9 @@ function Feed() {
         db.collection("posts").add({
             name : "Experience IQ",
             description : "this is a test",
-            message :
+            message : input,
+            photoUrl : "",
+            timestamp : firebase.firestore.FieldValue.serverTimestamp()
         })
         
     }
@@ -39,7 +42,7 @@ function Feed() {
                 <div className="feed__input">
                     <Create/>
                     <form>
-                        <input type="text" value={input} className="" />
+                        <input type="text" value={input} onChange={ e => setInput(e.target.value)} className="" />
                         <button type="submit" className=" " onClick={sendPost}>Send</button>
                     </form>
                 </div>

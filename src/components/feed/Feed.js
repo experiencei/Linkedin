@@ -1,5 +1,5 @@
 import { CalendarViewDay, Create, EventNote, Image, Subscriptions } from '@material-ui/icons';
-import React, { useState} from 'react'
+import React, { useState , useEffect} from 'react'
 import { db } from '../firebase/firebase';
 import InputOption from '../inputoption/InputOption';
 import Post from '../post/Post';
@@ -8,6 +8,7 @@ import "./Feed.css";
 
 function Feed() {
     const [posts , setPosts] = useState([]);
+    const [input , setInput] = useState('');
      
     useEffect(() => {
         db.collection("posts").onSnapshot(snapshot => (
@@ -24,7 +25,13 @@ function Feed() {
 
     const sendPost = e => {
         e.preventDefault();
-        setPosts
+
+        db.collection("posts").add({
+            name : "Experience IQ",
+            description : "this is a test",
+            message :
+        })
+        
     }
     return (
         <div className="feed">
@@ -32,7 +39,7 @@ function Feed() {
                 <div className="feed__input">
                     <Create/>
                     <form>
-                        <input type="text" className="" />
+                        <input type="text" value={input} className="" />
                         <button type="submit" className=" " onClick={sendPost}>Send</button>
                     </form>
                 </div>

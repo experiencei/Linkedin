@@ -1,4 +1,4 @@
-import { CalendarViewDay, Create, EventNote, Image, Subscriptions } from '@material-ui/icons';
+import { CalendarViewDay, Create, EventNote, Flip, Image, Subscriptions } from '@material-ui/icons';
 import React, { useState , useEffect} from 'react'
 import { db } from '../firebase/firebase';
 import InputOption from '../inputoption/InputOption';
@@ -7,6 +7,7 @@ import "./Feed.css";
 import firebase from '@firebase/app-compat';
 import {  useSelector } from 'react-redux';
 import { selectUser } from '../../features/userSlice';
+import FlipMove from "react-flip-move";
 
 
 function Feed() {
@@ -57,7 +58,8 @@ function Feed() {
                     <InputOption Icon={CalendarViewDay} title="Write article" color="#7FC15E"/>
                 </div>
             </div>
-         {
+            <FlipMove>
+            {
              posts.map(({ id , data: {name , description , message , photoUrl}}) =>
              <Post
                  key={id}
@@ -68,6 +70,7 @@ function Feed() {
              />
             )
          }
+            </FlipMove>
         </div>
     )
 }

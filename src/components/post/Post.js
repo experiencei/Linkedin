@@ -1,7 +1,6 @@
 import React, {forwardRef} from 'react';
 import { Avatar } from '@material-ui/core';
 import { ChatOutlined, SendOutlined, ShareOutlined, ThumbUpAltOutlined } from '@material-ui/icons';
-import React from 'react'
 import InputOption from '../inputoption/InputOption';
 import "./Post.css";
 

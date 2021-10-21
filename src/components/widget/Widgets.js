@@ -4,7 +4,7 @@ import "./Widgets.css"
 
 function Widgets() {
    const newsArticle = (heading , subtitle) => {
-       <div className="widgets__article">
+    return  <div className="widgets__article">
            <div className="widgets__articleLeft">
                <FiberManualRecord/>
            </div>

@@ -5,9 +5,12 @@ import InputOption from '../inputoption/InputOption';
 import Post from '../post/Post';
 import "./Feed.css";
 import firebase from '@firebase/app-compat';
+import {  useSelector } from 'react-redux';
+import { selectUser } from '../../features/userSlice';
 
 
 function Feed() {
+    const user = useSelector(selectUser)
     const [posts , setPosts] = useState([]);
     const [input , setInput] = useState('');
      
@@ -28,10 +31,10 @@ function Feed() {
         e.preventDefault();
 
         db.collection("posts").add({
-            name : "Experience IQ",
-            description : "this is a test",
+            name : user.displayName,
+            description : user.email,
             message : input,
-            photoUrl : "",
+            photoUrl : user.photoUrl || "",
             timestamp : firebase.firestore.FieldValue.serverTimestamp()
         })
         setInput("");

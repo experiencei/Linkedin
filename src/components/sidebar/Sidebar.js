@@ -6,7 +6,7 @@ function Sidebar() {
         <div className="sidebar">
             <div className="sidebar__top">
                 <img
-                    src=""
+                    src="https://images.pexels.com/photos/3881761/pexels-photo-3881761.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
                     alt=""
                 />
                 <Avatar className="sidebar__avatar"/>

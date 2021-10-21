@@ -1,5 +1,5 @@
-import { FiberManualRecord, Info } from '@material-ui/icons';
 import React from 'react';
+import { FiberManualRecord, Info } from '@material-ui/icons';
 import "./Widgets.css"
 
 function Widgets() {
@@ -18,7 +18,7 @@ function Widgets() {
     return (
         <div className="widgets">
             <div className="widgets__header">
-                <h2>LinkedIn News</h2>
+                <h2>Linkedin News</h2>
                 <Info/>
             </div>
             {newsArticle("Experience Iq is good and great" , "Top news - 9099 readers")}

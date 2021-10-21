@@ -1,7 +1,8 @@
-import React , {useState , useDispatch} from 'react'
+import React , {useState } from 'react'
 import "./Login.css";
 import { auth } from '../firebase/firebase';
 import { login } from '../../features/userSlice';
+import { useDispatch } from 'react-redux';
 
 function Login() {
     const [ email , setEmail] = useState('')
@@ -25,6 +26,8 @@ function Login() {
                    photoUrl : profilePic,
                 }))
            })
+       }).catch((error) => {
+           alert(error.message)
        })
     };
 

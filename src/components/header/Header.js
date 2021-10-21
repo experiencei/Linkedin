@@ -35,7 +35,7 @@ function Header() {
                 <HeaderOption Icon={Chat} title="Messaging"/>
                 <HeaderOption Icon={Notifications} title="Notifications"/>
                 <HeaderOption avatar="https://images.pexels.com/photos/4348404/pexels-photo-4348404.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" title="me"
-                    onClick={logoutOfApp}
+                onClick={logoutOfApp}
                 />
             </div>
         </div>

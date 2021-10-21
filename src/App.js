@@ -4,7 +4,8 @@ import './App.css';
 import Feed from './components/feed/Feed';
 import Header from './components/header/Header';
 import Sidebar from './components/sidebar/Sidebar';
-import selectUser from './components/selectUser/selectUser';
+import { selectUser } from './features/userSlice';
+import Login from './components/login/Login';
 
 
 function App() {

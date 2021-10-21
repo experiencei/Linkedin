@@ -9,7 +9,13 @@
 .sidebar__avatar{
     margin-bottom: 10px;
 }
-
+.sidebar__top > h4 {
+    color: gray;
+    font-size:12px;
+}
+.sidebar__top > h2{
+   font-size: 18px;
+}
 .sidebar__top{
     display: flex;
     flex-direction: column;
@@ -23,7 +29,7 @@
 }
 
 .sidebar__top > img {
-    margin-bottom: -10px;
+    margin-bottom: -20px;
     width: 100%;
     height: 60px;
     border-top-left-radius: 10px;
@@ -33,6 +39,10 @@
 .sidebar__stats{
     padding: 10px;
     margin-bottom:10px;
+    border: 1px solid lightgray;
+    background-color:white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .sidebar__stat{
@@ -48,4 +58,14 @@
 .sidebar__statNumber{
     font-weight: bold;
     color:#0a66c2 !important;
+}
+
+.sidebar__bottom{
+    text-align:left;
+    padding: 10px;
+    border: 1px solid lightgray;
+    background-color: white;
+    border-radius: 10px;
+    margin-top:10px;
+    
 }

@@ -11,7 +11,7 @@ function Sidebar() {
                 />
                 <Avatar className="sidebar__avatar"/>
                 <h2>Experience</h2>
-                <h4></h4>
+                <h4>Hello Yihua</h4>
             </div>
             <div className="sidebar__stats">
                 <div className="sidebar__stat">

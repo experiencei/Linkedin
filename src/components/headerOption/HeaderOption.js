@@ -5,8 +5,8 @@ import "./HeaderOption.css";
 function HeaderOption({ Icon , title}) {
 
     return (
-        <div className="HeaderOption">
-            {Icon && <Icon name="HeaderOption__icon" />}
+        <div className="headerOption">
+            {Icon && <Icon name="headerOption__icon" />}
             <h3>{title}</h3>
         </div>
     )

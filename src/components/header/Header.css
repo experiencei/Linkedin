@@ -16,15 +16,16 @@
     padding: 10px;
     display: flex;
     align-items: center;
-    border-radius:22px;
+    border-radius:5px;
     color:gray;
     background-color: #eef3f8;
+    height: 22px;
 }
 .header__search > input{
     outline: none;
     background: none;
     border: none;
 }
-.header__left{
+.header__right{
     
 }

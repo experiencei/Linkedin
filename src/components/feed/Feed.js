@@ -10,7 +10,7 @@ function Feed() {
 
     const sendPost = e => {
         e.preventDefault();
-        
+        setPosts
     }
     return (
         <div className="feed">

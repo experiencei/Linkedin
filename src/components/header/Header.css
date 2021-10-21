@@ -27,5 +27,5 @@
     border: none;
 }
 .header__right{
-    
+    display: flex;
 }

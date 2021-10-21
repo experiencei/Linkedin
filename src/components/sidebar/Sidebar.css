@@ -30,6 +30,10 @@
     border-top-right-radius: 10px;
     object-fit: cover;
 }
+.sidebar__stats{
+    padding: 10px;
+    margin-bottom:10px;
+}
 
 .sidebar__stat{
   margin-top:10px;

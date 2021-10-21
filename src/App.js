@@ -14,11 +14,10 @@ function App() {
   return (
     <div className="app">
       <Header/>
-
-      {user ? (<Login/>) : (<div className="app__body">
+      {user ? (<div className="app__body">
         <Sidebar/>
         <Feed/>
-      </div>)}
+      </div>) :  (<Login/>) }
       
     </div>
   );
